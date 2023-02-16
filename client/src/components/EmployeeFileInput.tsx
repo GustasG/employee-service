@@ -8,10 +8,10 @@ export default function EmployeeFileInput() {
 
   const mutation = useMutation(uploadEmployeeFile, {
     onSuccess: () => {
-      queryClient.invalidateQueries("employees")
+      queryClient.invalidateQueries("employees");
     },
     onError: () => {
-      toast.error("Failed to upload file")
+      toast.error("Failed to upload file");
     }
   });
 
