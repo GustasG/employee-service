@@ -3,9 +3,9 @@ import { useQuery } from "react-query";
 import { fetchEmployees } from "../api/employee";
 
 export default function EmployeeTable() {
-  const { data, status } = useQuery("employees", fetchEmployees);
+  const { data, isLoading, isError } = useQuery("employees", fetchEmployees);
 
-  if (status === "loading") {
+  if (isLoading) {
     return (
       <div className="w-full h-16 mt-8 mb-8 flex flex-col items-center justify-top">
         <span className="text-lg">Loading...</span>
@@ -13,7 +13,7 @@ export default function EmployeeTable() {
     );
   }
 
-  if (status === "error") {
+  if (isError) {
     return (
       <div className="w-full h-16 mt-8 mb-8 flex flex-col items-center justify-top">
         <span className="text-lg">Failed to fetch employee data</span>
