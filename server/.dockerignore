@@ -1,0 +1,10 @@
+# JetBrains IDEA
+.idea/
+*.iml
+
+# Visual Studio Code
+.vscode/
+.metals/
+
+# Java Artifact Files
+target/

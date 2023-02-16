@@ -3,6 +3,7 @@ package com.gusged.server.entitiy;
 import java.util.UUID;
 
 import com.opencsv.bean.CsvBindByName;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
