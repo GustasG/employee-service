@@ -20,11 +20,7 @@ export function fetchEmployees(): Promise<Employee[]> {
 
 export function uploadEmployeeFile(file: File): Promise<void> {
   const formData = new FormData();
-  formData.append("file", file)
+  formData.append("file", file);
 
-  return employeeApiClient.post("/upload", formData, {
-    headers: {
-      "Content-Type": "multipart/form-data"
-    }
-  });
+  return employeeApiClient.post("/upload", formData);
 }
